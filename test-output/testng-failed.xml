@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="extentReportListner.ExtentReporterNG"/>
+  </listeners>
+  <test name="testng(failed)">
+    <classes>
+      <class name="testcases.LoginPageTest">
+        <methods>
+          <include name="TestCase1"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.LoginPageTest -->
+      <class name="testcases.ContactPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="contact001"/>
+        </methods>
+      </class> <!-- testcases.ContactPageTest -->
+      <class name="testcases.HomePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="clickOnNewContactCreate"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.HomePageTest -->
+    </classes>
+  </test> <!-- testng(failed) -->
+</suite> <!-- Failed suite [Suite] -->
