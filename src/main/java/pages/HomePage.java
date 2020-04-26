@@ -58,4 +58,6 @@ public class HomePage extends TestBase
 		contactLink.click();
 		return new ContactPage();
 	}
+	
+	
 }
