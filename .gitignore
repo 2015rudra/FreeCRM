@@ -1,0 +1,52 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.classpath
+*.project
+*.settings
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+.git
+.metadata
+target
+RemoteSystemsTempFiles
+.hg
+**/target
+**/test-report
+**/test-download
+**/.settings
+*.classpath
+*.project
+*.factorypath
+**/*.pyc
+*~
+.idea
+.m2/*
+.sass-cache
+.idea/
+**/MANIFEST.MF
+*.log
+*.iml
+.svn
+.apt_generated
+_.swp
+.sonar/
