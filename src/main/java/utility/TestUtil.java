@@ -3,11 +3,18 @@ package utility;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -58,7 +65,47 @@ public class TestUtil extends TestBase
 	}
 
 
+	public static ArrayList<String> extractExcelContentByColumnIndex(String FilepathandName ,String sheetName ,int columnIndex){
+		ArrayList<String> columndata = null;
+		try {
+			FileInputStream ios = null;
+			try {
+				ios  = new FileInputStream(FilepathandName);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			XSSFWorkbook workbook = new XSSFWorkbook(ios);
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			Iterator<Row> rowIterator = sheet.iterator();
+			columndata = new ArrayList<>();
 
+			while (rowIterator.hasNext()) {
+				Row row = rowIterator.next();
+				Iterator<Cell> cellIterator = row.cellIterator();
+				while (cellIterator.hasNext()) {
+					Cell cell = cellIterator.next();
+
+					if(row.getRowNum() > 0){ //To filter column headings
+						if(cell.getColumnIndex() == columnIndex){// To match column index
+							switch (cell.getCellType()) {
+							case Cell.CELL_TYPE_NUMERIC:
+								columndata.add(cell.getNumericCellValue()+"");
+								break;
+							case Cell.CELL_TYPE_STRING:
+								columndata.add(cell.getStringCellValue());
+								break;
+							}
+						}
+					}
+				}
+			}
+			ios.close();
+			// System.out.println(columndata);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return columndata;
+	}
 
 
 	public static boolean waitForAnObjectToBeAvailable(WebDriver driver,
