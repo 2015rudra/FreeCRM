@@ -45,7 +45,7 @@ public class TestBase
 		if(browserName.contentEquals("chrome")) 
 		{
 			System.setProperty("webdriver.chrome.silentOutput","true");
-			System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\Chrome\\Chrome81\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\Practise\\FreeCRM\\src\\main\\java\\Driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
