@@ -11,8 +11,9 @@
   <test thread-count="5" name="testng">
     <classes>
       <class name="testcases.LoginPageTest"/>
-      <class name="testcases.HomePageTest"/>
-      <class name="testcases.ContactPageTest"/>
+     <!--  <class name="testcases.HomePageTest"/>
+      <class name="testcases.ContactPageTest"/> -->
+      
     </classes>
   </test> <!-- testng -->
 </suite> <!-- Suite -->
