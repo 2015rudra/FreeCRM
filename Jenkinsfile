@@ -2,11 +2,6 @@ pipeline {
 
     agent any
 
-    environment {
-        BROWSER = 'chrome'
-        TEST_ENV = 'qa'
-    }
-
     stages {
 
         stage('Checkout') {
@@ -21,13 +16,9 @@ pipeline {
             }
         }
 
-        stage('Selenium Regression') {
+        stage('Selenium Tests') {
             steps {
-                sh '''
-                    mvn -B test \
-                    -Dbrowser=${BROWSER} \
-                    -Denv=${TEST_ENV}
-                '''
+                sh 'mvn -B test'
             }
         }
     }
@@ -42,11 +33,11 @@ pipeline {
         }
 
         success {
-            echo 'Selenium regression PASSED'
+            echo 'Selenium tests PASSED'
         }
 
         failure {
-            echo 'Selenium regression FAILED'
+            echo 'Selenium tests FAILED'
         }
     }
 }
