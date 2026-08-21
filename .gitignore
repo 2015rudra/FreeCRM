@@ -1,53 +1,45 @@
-# Compiled class file
+# Maven build output
+target/
+
+# Compiled Java files
 *.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-*.classpath
-*.project
-*.settings
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-
-.git
-.metadata
-target
-RemoteSystemsTempFiles
-.hg
-target/
-test-output/
-**/test-report
-**/test-download
-**/.settings
-*.classpath
-*.project
-*.factorypath
-**/*.pyc
-*~
-.idea
-.m2/*
-.sass-cache
+# IDE files - IntelliJ IDEA
 .idea/
-**/MANIFEST.MF
-*.log
 *.iml
-.svn
-.apt_generated
-_.swp
-.sonar/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Test reports
+test-output/
+reports/
+surefire-reports/
+failsafe-reports/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment/config files containing secrets
+.env
+*.env
+
+# Maven wrapper
+# Uncomment these if you don't want to commit Maven Wrapper files
+# .mvn/
+# mvnw
+# mvnw.cmd
