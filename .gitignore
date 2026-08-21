@@ -30,7 +30,8 @@ hs_err_pid*
 target
 RemoteSystemsTempFiles
 .hg
-**/target
+target/
+test-output/
 **/test-report
 **/test-download
 **/.settings
