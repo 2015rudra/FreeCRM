@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -52,11 +53,20 @@ public class HomePage extends TestBase
 	}
 
 	
-	public ContactPage clickContactLink() throws IOException 
+	public ContactPage clickContactLink() throws IOException, InterruptedException 
 	{
 		TestUtil.waitForAnObject(driver, contactLink, GlobalThings.minWait);
 		contactLink.click();
+		Thread.sleep(3000);
 		return new ContactPage();
+	}
+	
+	public static void printAllHTags() 
+	{
+		List<WebElement> list = driver.findElements(By.tagName("h3"));
+		for (WebElement h : list) {
+		    System.out.println(h.getText());
+		}
 	}
 	
 	

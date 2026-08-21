@@ -45,7 +45,7 @@ public class LoginPageTest extends TestBase
 	public void TestCase2() 
 	{
 		String actualTitle = loginPage.getPageTitle();
-		Assert.assertEquals(actualTitle, "Cogmento CRM", "Title din't matched");
+		Assert.assertEquals(actualTitle, "Free CRM", "Title din't matched");
 	}
 	
 	

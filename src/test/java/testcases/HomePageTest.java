@@ -44,10 +44,18 @@ public class HomePageTest extends TestBase
 	 * "Rupesh Kadam", "Logged in username doesn't matched"); }
 	 */
 	@Test
-	public void clickOnNewContactCreate() throws IOException 
+	public void clickOnNewContactCreate() throws IOException, InterruptedException 
 	{
 		homePage.clickContactLink();
+		//homePage.printAllHTags();
 	}
+	
+	@Test
+	public void printAllHTags() throws IOException, InterruptedException 
+	{
+		homePage.printAllHTags();
+	}
+	
 	
 	@AfterMethod
 	public void tearDown() 

@@ -23,7 +23,7 @@ public class TestBase
 		try 
 		{
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\Practise\\CucumberPOM\\src\\main\\java\\Config\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Rudra\\OneDrive\\Desktop\\FreeCRM_Selenium\\src\\main\\java\\config\\config.properties");
 			prop.load(ip);
 
 		} catch (FileNotFoundException e) 
@@ -45,7 +45,7 @@ public class TestBase
 		if(browserName.contentEquals("chrome")) 
 		{
 			System.setProperty("webdriver.chrome.silentOutput","true");
-			System.setProperty("webdriver.chrome.driver", "D:\\Practise\\FreeCRM\\src\\main\\java\\Driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rudra\\OneDrive\\Desktop\\FreeCRM_Selenium\\src\\main\\java\\Driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();

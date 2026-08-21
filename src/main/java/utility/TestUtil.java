@@ -38,6 +38,7 @@ public class TestUtil extends TestBase
 
 	public static int Page_Load_TimeOut = 120;
 	public static int Implicit_Wait = 30;
+	public static int mwait = 4;
 	public static String TESTDATA_SHEET_PATH = "D:\\FreeCRM\\FreeCRM\\FreeCRM\\src\\main\\java\\testdata\\TestData.xlsx";
 	static Workbook book;
 	static Sheet sheet;
@@ -47,7 +48,7 @@ public class TestUtil extends TestBase
 	public static boolean waitForAnObject(WebDriver driver, WebElement elmt,
 			Integer time) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, time);
+			WebDriverWait wait = new WebDriverWait(driver, mwait);
 			wait.until(presenceOfElementLocated(elmt));
 			return true;
 		} catch (Exception e) {

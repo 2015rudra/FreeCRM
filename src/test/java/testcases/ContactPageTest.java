@@ -28,7 +28,7 @@ public class ContactPageTest extends TestBase
 	}
 	
 	@BeforeMethod
-	public void setUp() throws IOException 
+	public void setUp() throws IOException, InterruptedException 
 	{
 		initilization();
 		loginPage = new LoginPage();
