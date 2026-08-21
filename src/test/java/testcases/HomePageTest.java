@@ -53,7 +53,7 @@ public class HomePageTest extends TestBase
 	@Test
 	public void printAllHTags() throws IOException, InterruptedException 
 	{
-		homePage.printAllHTags();
+		HomePage.printAllHTags();
 	}
 	
 	

@@ -1,5 +1,8 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -45,7 +48,7 @@ public class LoginPageTest extends TestBase
 	public void TestCase2() 
 	{
 		String actualTitle = loginPage.getPageTitle();
-		Assert.assertEquals(actualTitle, "Free CRM", "Title din't matched");
+		AssertJUnit.assertEquals(actualTitle, "Free CRM", "Title din't matched");
 	}
 	
 	
