@@ -48,11 +48,7 @@ public class TestBase
 			System.setProperty("webdriver.chrome.silentOutput","true");
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rudra\\OneDrive\\Desktop\\FreeCRM_Selenium\\src\\main\\java\\Driver\\chromedriver.exe");
 			
-			ChromeOptions options = new ChromeOptions();
-
-			options.addArguments("--headless=new");
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
+		
 			
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
