@@ -49,7 +49,7 @@ public class TestBase
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rudra\\OneDrive\\Desktop\\FreeCRM_Selenium\\src\\main\\java\\Driver\\chromedriver.exe");
 			
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 
 			

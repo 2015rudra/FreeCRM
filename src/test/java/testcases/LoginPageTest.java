@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import testBase.TestBase;
+import utility.TestUtil;
 
 public class LoginPageTest extends TestBase
 
@@ -20,6 +21,7 @@ public class LoginPageTest extends TestBase
 
 	LoginPage loginPage;
 	HomePage homePage;
+	TestUtil util;
 	
 	public LoginPageTest() throws IOException 
 	{
@@ -34,6 +36,7 @@ public class LoginPageTest extends TestBase
 		initilization();
 		loginPage = new LoginPage();
 		homePage = new HomePage();
+		util = new TestUtil();
 	}
 	
 	
@@ -50,6 +53,12 @@ public class LoginPageTest extends TestBase
 		String actualTitle = loginPage.getPageTitle();
 		System.out.println(actualTitle);
 		//AssertJUnit.assertEquals(actualTitle, "Free CRM", "Title din't matched");
+	}
+	
+	@Test
+	public void TestCaseVerifyLinks() 
+	{
+		util.verifyLinks();
 	}
 	
 	

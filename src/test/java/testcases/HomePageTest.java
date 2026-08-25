@@ -10,12 +10,14 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import testBase.TestBase;
+import utility.TestUtil;
 
 public class HomePageTest extends TestBase
 {
 
 	LoginPage loginPage;
 	HomePage homePage;
+	TestUtil util;
 	
 	public HomePageTest() throws IOException 
 	{
@@ -29,6 +31,7 @@ public class HomePageTest extends TestBase
 		initilization();
 		loginPage = new LoginPage();
 		homePage = new HomePage();
+		util = new TestUtil();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
@@ -56,11 +59,17 @@ public class HomePageTest extends TestBase
 		HomePage.printAllHTags();
 	}
 	
+	@Test
+	public void printAllATags() throws IOException, InterruptedException 
+	{
+		util.verifyLinks();
+	}
+	
 	
 	@AfterMethod
 	public void tearDown() 
 	{
-		loginPage.logout();
+		//loginPage.logout();
 		driver.quit();
 	}
 	
