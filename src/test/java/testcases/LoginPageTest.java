@@ -40,8 +40,7 @@ public class LoginPageTest extends TestBase
 	}
 	
 	
-	
-	  @Test public void TestCase1() throws IOException 
+	 @Test public void TestCase1() throws IOException 
 	  { 
 		  homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	  }
